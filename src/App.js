@@ -26,7 +26,9 @@ class App extends Component {
       <div className="App">
         <h1 className="app-title">Turing Cafe Reservations</h1>
         <ButtonContainer />
-        <ReservationContainer reservations={this.state.reservations}/>
+        <div className="res-container">
+          <ReservationContainer reservations={this.state.reservations}/>
+        </div>
         <div className="resy-form" />
         <div className="resy-container" />
       </div>

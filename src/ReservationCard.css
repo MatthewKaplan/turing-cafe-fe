@@ -1,0 +1,6 @@
+.reservation-card {
+  border: 2px solid red;
+  color: blue;
+  background-color: white;
+  display: grid;
+}
