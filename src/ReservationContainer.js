@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReservationCard from './ReservationCard';
+import './ReservationContainer.css';
 
-class ReservationContainer extends Component{
-  constructor() {
-    super()
-
-  }
-
-  render() {
-    return (
-      <div className="reservation-container">
-      
-      </div>
-    )
-  }
+const ReservationContainer = ({reservations}) => {
+  const displayReservations = reservations.map(reservation => (
+    <ReservationCard {...reservation} />
+  ))
+  return <div className="cards">{displayReservations}</div>
 }
 
 export default ReservationContainer;

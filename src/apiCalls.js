@@ -8,4 +8,14 @@ const fetchReservations = url => {
   });
 };
 
-export { fetchReservations };
+const fetchPost = (url, options) => {
+  return fetch(url, options).then(response => {
+    if (!response.ok) {
+      throw new Error("unable to Post");
+    } else {
+      return response.json();
+    }
+  });
+};
+
+export { fetchReservations, fetchPost };
